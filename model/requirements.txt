@@ -1,0 +1,7 @@
+
+#hetet heda lfile la n3ref libraries li 3eznehon 
+
+pandas==3.0.5 # read file 
+numpy==2.5.3 # do some calculation using this lib 
+scikit-learn==1.9.1 # for training ml model 
+joblib==1.6.0 # after training the model we need to store in the file 
