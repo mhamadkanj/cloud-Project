@@ -12,9 +12,12 @@ RUN pip install --no-cache-dir --prefix=/install -r requirements.txt \
 
 # ---------- Stage 2: the small image that actually runs ----------
 FROM python:3.12-slim
+# CI passes the commit SHA here, so GET /version shows which commit is running
+ARG API_VERSION=dev
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    MODEL_PATH=/app/model/model-1.0.0.joblib
+    MODEL_PATH=/app/model/model-1.0.0.joblib \
+    API_VERSION=${API_VERSION}
 WORKDIR /app
 
 # only the installed packages come from stage 1, no build leftovers
