@@ -1,0 +1,7 @@
+# Lint settings used by CI (ruff check .)
+line-length = 130
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "W"]
+ignore = ["E741"]  # short loop names like l are fine in our scripts
