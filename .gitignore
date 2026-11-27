@@ -23,5 +23,5 @@ __blobstorage__/
 __queuestorage__/
 
 # --- editors / OS ---
-.vscode/
+
 Thumbs.db
