@@ -34,7 +34,7 @@ jobs:
         run: ruff check .
 
       - name: Tests (pytest)
-        run: pytest api/tests -v
+        run: pytest api/tests functions/tests -v
 
   build-push:
     name: Build and push image
